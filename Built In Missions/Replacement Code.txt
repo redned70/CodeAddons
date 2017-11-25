@@ -1,0 +1,78 @@
+		class SupplyBox 
+		{
+			/*
+				Drops a supply box on a parachute next to a random airport on the map.
+				The box may contain items. The box can be transported to a territory
+				and installed to become a normal storage container.
+				[CiC]red_ned edit - {"Item", min, max} randomiser
+			*/
+			type = "spawn";
+			function = "ExileServer_system_event_supplyBox_start";
+			minTime = 60; // minutes
+			maxTime = 180; // minutes
+			minimumPlayersOnline = 10;
+			dropRadius = 500; // 500m around an airport (including the main airport on Altis!)
+			dropAltitude = 100; // altitude of the drop
+			markerTime = 10; // minutes
+
+			/*
+				These are different types of boxes can be dropped.
+				You can specify the cargo a box should contain.
+				The type of box is chosen randomly from the following list.
+				Add a type multiple times to increase the chance of being used.
+			*/
+			types[] = {"Beer", "Beer", "Tools", "Food", "Food", "RepairParts"};
+
+			class BoxTypes
+			{
+				class Beer 
+				{
+					items[] = 
+					{
+						{"Exile_Item_Beer", 10, 25}			// gives at least 10 and up to 25 randomly
+					};
+				};
+
+				class Food 
+				{
+					items[] = 
+					{
+						{"Exile_Item_BBQSandwich", 1, 5},
+						{"Exile_Item_Catfood", 1, 5},
+						{"Exile_Item_ChristmasTinner", 1, 5},
+						{"Exile_Item_GloriousKnakworst", 1, 5},
+						{"Exile_Item_SausageGravy", 1, 5},
+						{"Exile_Item_Surstromming", 1, 5},
+						{"Exile_Item_CanOpener", 1, 1},
+						{"Exile_Item_CookingPot", 1, 1},
+						{"Exile_Item_Matches", 1, 1}
+					};
+				};
+
+				class Tools 
+				{
+					items[] = 
+					{
+						{"Exile_Item_Wrench", 1, 1},
+						{"Exile_Item_Shovel", 1, 1},
+						{"Exile_Item_Screwdriver", 1, 1},
+						{"Exile_Item_Pliers", 1, 1},
+						{"Exile_Item_Handsaw", 1, 1},
+						{"Exile_Item_FireExtinguisher", 1, 1},
+						{"Exile_Item_DuctTape", 1, 1}
+					};
+				};
+
+				class RepairParts 
+				{
+					items[] = 
+					{
+						{"Exile_Item_CarWheel", 1, 8},
+						{"Exile_Item_FuelCanisterFull", 1, 4},
+						{"Exile_Item_OilCanister", 1, 1},
+						{"Exile_Item_Grinder", 1, 1},
+						{"Exile_Item_CordlessScrewdriver", 1, 1}
+					};
+				};
+			};
+		};
