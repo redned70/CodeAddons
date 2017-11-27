@@ -1,0 +1,9 @@
+Debug screen:
+
+
+_cfg = configFile >> "cfgSounds";
+ for "_i" from 0 to (count _cfg) - 1 do { _sounds = getArray (configfile >> "CfgSounds" >> configName (_cfg select _i) >> "sound");
+ diag_log format ["%1", _sounds select 0];}; 
+ 
+ 
+dumps to rpt file
