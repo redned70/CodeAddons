@@ -1,8 +1,8 @@
 # Exile Random loot 4TypesOfSideEvents
 
 Allows for min and max levels of loot in 2 of the 4TypesOfSideEvents by GolovaRaoul<br>
-<b>Original thread by GolovaRaoul<a href="http://www.exilemod.com/topic/24466-4-types-of-side-events/">http://www.exilemod.com/topic/24466-4-types-of-side-events/</a></b><br>
-
+<b>Original thread by GolovaRaoul <a href="http://www.exilemod.com/topic/24466-4-types-of-side-events/">http://www.exilemod.com/topic/24466-4-types-of-side-events/</a></b><br>
+<b>This is not my code just an adjustment of 2 of the original files</b><br>
 To Install:<br>
 1. Once you have followed the instuctions for the main install by GolovaRaoul, replace the 2 mission files with the versions from here exile_server\code\.<br><br>
 ExileServer_system_event_ikea_start<br>
