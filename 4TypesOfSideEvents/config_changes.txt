@@ -1,0 +1,263 @@
+		class MilitaryDrop 
+		{
+			/*
+				Drops a supply box on a parachute next to a random airport on the map.
+				The box may contain items. The box can be transported to a territory
+				and installed to become a normal storage container.
+				[CiC]red_ned edit - {"Item", min, max} randomiser
+			*/
+			type = "spawn";
+			function = "ExileServer_system_event_militarydrop_start";
+			minTime = 25; // minutes
+			maxTime = 40; // minutes
+			minimumPlayersOnline = 1;
+			dropRadius = 500; // 500m around an airport (including the main airport on Altis!)
+			dropAltitude = 0; // altitude of the drop
+			markerTime = 10; // minutes
+
+			/*
+				These are different types of boxes can be dropped.
+				You can specify the cargo a box should contain.
+				The type of box is chosen randomly from the following list.
+				Add a type multiple times to increase the chance of being used.
+			*/
+			types[] = {"KSVK_2", "Lynx_2","AS50_2", "L115A3_2","Stinger_2","SPMG_2","M107_2","M320_2","Ak_2","RPG_2"};
+
+			class BoxTypes5
+			{
+				class KSVK_2 
+				{
+					items[] = 
+					{
+						{"CUP_srifle_ksvk", 1, 3},						// minimum of 1 items, max of 3 so possible 1,2,3 items
+						{"CUP_5Rnd_127x108_KSVK_M", 4, 8},				// minimum of 4 items, max of 8 so possible 4,5,6,7,8 items
+						{"5Rnd_127x108_APDS_Mag",1 , 2},				// minimum of 1 items, max of 2 so possible 1,2 items
+						{"optic_KHS_tan", 1, 3} 						// minimum of 1 items, max of 3 so possible 1,2,3 items 
+					};
+				};
+				
+				class M320_2
+				{
+					items[] = 
+					{
+						{"srifle_LRR_camo_F", 1, 1},
+						{"srifle_LRR_F", 1, 1},
+						{"srifle_LRR_tna_F", 1, 1},
+						{"7Rnd_408_Mag", 10, 15},
+						{"optic_LRPS", 1, 3}
+					};
+				};
+
+				class Lynx_2 
+				{
+					items[] = 
+					{
+						{"srifle_GM6_ghex_F", 1, 3},
+						{"Exile_Magazine_5Rnd_127x108_Bullet_Cam_Mag", 6, 12},
+						{"optic_LRPS_ghex_F", 1, 3}
+					};
+				};
+
+				class AS50_2
+				{
+					items[] = 
+					{
+						{"CUP_srifle_AS50", 1, 3},
+						{"CUP_5Rnd_127x99_as50_M", 6, 12},
+						{"CUP_optic_CWS", 1, 3}
+					};
+				};
+				
+				class M107_2
+				{
+					items[] = 
+					{
+						{"CUP_srifle_M107_Base", 1, 3},
+						{"CUP_10Rnd_127x99_m107", 6, 12},
+						{"CUP_optic_CWS", 1, 3}
+					};
+				};
+				
+				class SPMG_2
+				{
+					items[] = 
+					{
+						{"MMG_02_black_F", 1, 2},
+						{"MMG_02_camo_F", 1, 1},
+						{"MMG_02_sand_F", 1, 1},
+						{"130Rnd_338_Mag", 10, 1}
+					};
+				};
+
+				class L115A3_2 
+				{
+					items[] = 
+					{
+						{"CUP_srifle_AWM_des", 1, 3},
+						{"CUP_5Rnd_86x70_L115A1", 10, 20},
+						{"optic_LRPS_ghex_F", 1, 3}
+					};
+				};
+				
+				class Stinger_2 
+				{
+					items[] = 
+					{
+						{"CUP_Stinger", 1, 3},
+						{"CUP_Stinger_M", 6, 12}
+					};
+				};
+				
+				class Ak_2
+				{
+					items[] = 
+					{
+						{"Exile_Weapon_AK47", 1, 3},
+						{"Exile_Weapon_AK74_GL", 1, 3},
+						{"Exile_Weapon_AK107_GL", 1, 3},
+						{"Exile_Weapon_AKM", 1, 3},
+						{"Exile_Weapon_AKS_Gold", 1, 3},
+						{"Exile_Magazine_30Rnd_762x39_AK", 10},
+						{"Exile_Magazine_30Rnd_545x39_AK",10},
+						{"1Rnd_HE_Grenade_shell", 2,5}
+						
+						
+					};
+				};
+				
+				class RPG_2
+				{
+					items[] = 
+					{
+						{"CUP_launch_RPG7V", 1, 3},
+						{"CUP_PG7V_M", 5, 10}					
+						
+					};
+				};
+			};
+		};
+		
+		class IKEA 
+		{
+			/*
+				Drops a supply box on a parachute next to a random airport on the map.
+				The box may contain items. The box can be transported to a territory
+				and installed to become a normal storage container.
+				[CiC]red_ned edit - {"Item", min, max} randomiser
+			*/
+			type = "spawn";
+			function = "ExileServer_system_event_ikea_start";
+			minTime = 25; // minutes
+			maxTime = 45; // minutes
+			minimumPlayersOnline = 0;
+			dropRadius = 500; // 500m around an airport (including the main airport on Altis!)
+			dropAltitude = 0; // altitude of the drop
+			markerTime = 10; // minutes
+
+			/*
+				These are different types of boxes can be dropped.
+				You can specify the cargo a box should contain.
+				The type of box is chosen randomly from the following list.
+				Add a type multiple times to increase the chance of being used.
+			*/
+			types[] = {"Materials1", "Materials2", "Materials3", "WoodBox", "WoodBox2", "ConcreteBuildingSupplies", "SpecialBuildingSupplies", "FortifiedUpgradeSupplies", "FortifiedSupplies"};
+
+			class BoxTypes2
+			{
+				class Materials1 
+				{
+					items[] = 
+					{
+						{"Exile_Item_Cement", 2, 5},						// minimum of 2 items, max of 5 so possible 2,3,4,5 items
+						{"Exile_Item_Sand", 6, 12},							// minimum of 6 items, max of 12 so possible 6,7,8,9,10,11,12 items
+						{"Exile_Item_MetalPole", 4, 8},						// minimum of 4 items, max of 8 so possible 4,5,6,7,8 items
+						{"Exile_Item_WaterCanisterDirtyWater", 2, 5},		// minimum of 2 items, max of 5 so possible 2,3,4,5 items
+						{"Exile_Item_FuelCanisterFull", 1, 3}				// minimum of 1 items, max of 3 so possible 1,2,3 items
+					};
+				};
+
+				class Materials2 
+				{
+					items[] = 
+					{
+						{"Exile_Item_Cement", 5, 11},
+						{"Exile_Item_Sand", 3, 6},
+						{"Exile_Item_MetalPole", 4, 9},
+						{"Exile_Item_WaterCanisterDirtyWater", 4, 8},
+						{"Exile_Item_FuelCanisterFull", 1, 2}
+					};
+				};
+
+				class Materials3
+				{
+					items[] = 
+					{
+						{"Exile_Item_Cement", 4, 8},
+						{"Exile_Item_Sand", 4, 9},
+						{"Exile_Item_MetalPole", 6, 12},
+						{"Exile_Item_WaterCanisterDirtyWater", 2, 4},
+						{"Exile_Item_FuelCanisterFull", 2, 5}
+					};
+				};
+
+				class WoodBox 
+				{
+					items[] = 
+					{
+						{"Exile_Item_WoodFloorKit", 4, 8},
+						{"Exile_Item_WoodWallKit", 6, 12},
+						{"Exile_Item_WooDDoorKit", 1, 2}
+					};
+				};
+
+				class WoodBox2
+				{
+					items[] = 
+					{
+						{"Exile_Item_WoodFloorKit", 7, 14},
+						{"Exile_Item_WoodWallKit", 4, 9},
+						{"Exile_IteM_WoodGateKit", 1, 2}
+					};
+				};
+
+				class ConcreteBuildingSupplies 
+				{
+					items[] = 
+					{
+						{"Exile_Item_ConcreteWallKit", 1, 3},
+						{"Exile_Item_ConcreteDoorKit", 1, 1},
+						{"Exile_Item_ConcreteFloorKit", 1, 3}
+					};
+				};
+
+				class SpecialBuildingSupplies 
+				{
+					items[] = 
+					{
+						{"Exile_Item_CodeLock", 1, 2},
+						{"Exile_Item_MetalBoard", 2, 4},
+						{"Exile_Item_CamoTentKit", 1, 3},
+						{"Exile_Item_DuctTape", 1, 3}
+						
+					};
+				};
+
+				class FortifiedUpgradeSupplies 
+				{
+					items[] = 
+					{
+						{"Exile_Item_MetalPole", 5, 10},
+						{"Exile_Item_MetalBoard", 10, 20}
+					};
+				};
+
+				class FortifiedSupplies 
+				{
+					items[] = 
+					{
+						{"Exile_Item_FortificationUpgrade", 3, 6},
+						{"Exile_Item_Grinder", 2, 4}
+					};
+				};
+			};
+		};
