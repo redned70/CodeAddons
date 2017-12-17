@@ -1,0 +1,36 @@
+Logic in this case means ways of using various paths to get somewhere using things like "if" "else" or even "round(random X)"
+
+1. Simple way to disable chunks of code if sharing missions
+(i)	Defined variable - becomes an "if" Defined "then"
+	//uncomment to use
+	//#define USE_CUP_Items 1
+	
+useage:
+
+_posWeapons =	[
+					#ifdef USE_CUP_Items
+						"CUP_Igla_M",
+						"CUP_Igla_M",
+						"CUP_Igla_M",
+						"CUP_Igla_M",
+						"CUP_Igla_M",
+						"CUP_Igla_M",  
+					#endif		
+					"Exile_Item_Knife",
+					"Exile_Item_Knife",
+					"Exile_Item_Knife",
+					"Exile_Item_Knife"
+				];
+				
+So if the #define is uncommented this will include all the CUP items in the _posWeapons variable, if it isnt uncommented then it will just use whatever is outside the #idef to #endif statement
+
+>>>>>>>>>> IMPORTANT <<<<<<<<<<
+Avoid having the  #ifedf/#endif statement at the end of a list as this affects the last line comma and can break for inexperienced users
+
+2. "If" "then" "else" "=" "==" and all the other syntax required for logic statements
+
+"if" requires something that if is true/false then but doesnt require else as you can do it as a one off > 
+(i)		if x=y then {XXXXXX};			> if x equals y then do XXXXXX
+(ii)	if !(x=y) then {XXXXXX}; 		> if x DOES NOT equal y then do XXXXXX > "!" means NOT
+"then" this is a shortening of "then do"
+"else" if your "if" statement isnt fulfilled the then do this instead > if x=y then {XXXXXX} else {YYYYYY};

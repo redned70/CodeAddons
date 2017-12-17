@@ -1,0 +1,31 @@
+Variables
+
+1.	Private
+	Held purely inside the DMS mission or system and not passed on to other parts of Arma/Exile
+2.	Public
+	Passed through all parts of the Arma/Exile server
+3.	Single/Strings
+	One value for a variable or a number os single values for one variable
+
+>>>>>>>>>> IMPORTANT <<<<<<<<<<
+ALL private variables MUST start with an underscore like _pos in your missions otherwise the server will immediately throw an error!
+All private variables MUST be defined as private or you could risk throwing a server error!
+>>>>>>>>>> IMPORTANT <<<<<<<<<<
+Private variables can be passed through the DMS system and not just used inside the mission running like _pos = [X,Y,Z]; passes through to the central DMS system and doesnt just exist as a variable to define things inside the mission.
+
+1. Syntax
+(i). Define as you go
+					You can define each private variable on the fly as they are used like this:
+					private _objects = [];
+					private _vehicle = "Exile_Car_Ural_Covered_Blue";
+
+(ii). Globally define
+					Using the same on the fly approach can make things longer and the mission larger and harder to read so I much prefer defining the private variables at the start of the mission
+					private = ["_objects", "_vehicle"];
+					
+		Then code in mission becomes:
+					_objects = [];
+					_vehicle = "Exile_Car_Ural_Covered_Blue";
+					
+*	Remember everything must be in quotes with a comma after each item except the final one and the [] must end with a semi-colon (this is a string variable).
+

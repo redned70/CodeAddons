@@ -1,0 +1,34 @@
+1. Useful to know.
+
+Waiting for missions to spawn so you can test is pain in the bum so the following useful commands are available through the admin console in game.
+You can either
+1. Use Admin console in Infistar
+2. Log into admin console through Arma using #login <password>
+https://community.bistudio.com/wiki/Multiplayer_Server_Commands for more information on that.
+*note only 1 person can be in the console at once*
+
+
+
+2. Logging from DMS
+
+
+(i) The debug mode does still exist in DMS they just took the commented version out but you can add it back in.
+1. Open your a3_dms.pbo
+2. Edit config.sqf
+3. At the top after all the commented out guff just add:
+DMS_DEBUG = true;
+4. save and repack/upload
+It creates huge RPT files in your main server logs so only use for a while
+
+
+(ii) Logging from inside the mission is also possible, really useful if you are creating variables on the fly to make missions more random.
+1. Edit the mission you want to monitor
+2. You can use this function to monitor variables:
+
+diag_log format ["Running DMS MISSION %1",_missionName]; 
+
+If you are logging it MUST be run after the variable is actually defined, no point putting it at the top as it wont have the variables yet.
+Here's a longer one so you can see lots going through as the %1 referes to the 1st variable after the end quote, you can stack with %2 %3 etc
+
+diag_log format ["nedbandit1 :: Called MISSION with these parameters: >>AI Group: %1 (plus leader) >>Cash: %2 >>Vwin: %3 >>Colour: %4 >>Difficulty: %5 >>Vehicle: %6",_AICount,_cash,_Vwin,_colour,_difficulty,_vehicleP];
+this is from ned_bandit1_mission.sqf - > https://github.com/redned70/DMSBanditMissions/blob/master/missions/bandit/nedbandit1_mission.sqf
