@@ -1,0 +1,26 @@
+To create a mapped vehicle which is for display only you can call using this (nice simple export from :
+
+private _objects = 
+[
+	["YOUR VEHICLE HERE",[15086.8,16044.5,16.3915],[[0,1,0],[0,0,1]],[false,false]], 
+	["YOUR VEHICLE HERE",[15086.8,16044.5,16.3915],[[0,1,0],[0,0,1]],[false,false]]
+];
+{
+	private _object = (_x select 0) createVehicle [0,0,0];
+	_object setPosASL (_x select 1);
+	_object setVectorDirAndUp (_x select 2);
+	_object enableSimulationGlobal ((_x select 3) select 0);
+	_object allowDamage ((_x select 3) select 1);
+	_object setVehicleLock "LOCKED";
+} forEach _objects; 
+ 
+ 
+ 
+>>>>>>>>>> Notes <<<<<<<<<<
+This creates a simple object which doesnt take damage and is locked.
+
+Other lock variables
+setVehicleLock "UNLOCKED" 		= same as "lock 0"
+setVehicleLock "DEFAULT" 		= same as "lock 1"
+setVehicleLock "LOCKED" 		= same as "lock 2"
+setVehicleLock "LOCKEDPLAYER" 	= same as "lock 3" 
