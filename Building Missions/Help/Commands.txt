@@ -1,0 +1,14 @@
+Commands
+
+Spawning a static mission
+Sometimes you need to spawn a mission for testing as it could take ages to actually come around
+
+Spawning a static mission
+["Some_Mission"] call DMS_fnc_SpawnStaticMission;
+
+Spawning a bandit missions
+["some_mission"] call DMS_fnc_SpawnBanditMission;
+
+>>>>>>>>>> Note <<<<<<<<<<
+The mission you are spawning must be in the list of possible missions to spawn.
+I have found sometimes there is a little delay especially if you try running the mission immediately after rebooting the server and joining quickly.
