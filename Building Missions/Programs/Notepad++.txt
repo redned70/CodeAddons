@@ -1,0 +1,36 @@
+Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages. Running in the MS Windows environment, its use is governed by GPL License.
+
+Download
+https://notepad-plus-plus.org/download/
+
+
+SQF Language
+I really find this helpful to spot mistakes and read code, easy to install and use.
+
+Download
+http://www.armaholic.com/page.php?id=8692
+
+General Notes
+Notepad++ is probably the most used tool i have on my computer:
+It can search/replace not only in the file but in files inside folders.
+It can recognise languages and show errors and syntax.
+It has multiple tabs and is great at opening large files or keeping information in a tab even if not saved and program is restarted.
+It can manipulate data on the page really easily and do tricks i had not seen before with its advanced code replace (like \n for line breaks) and using alt+click highlighting it made life much simpler.
+
+Shortcuts
+1. Change cursor type: Press 'Insert'
+2. Duplicate current line: Ctrl + D
+3. Delete current line: Ctrl + L
+4. New text tab: Ctrl + N
+5. Convert to lower case: Ctrl + U
+6. Convert  to upper case: Ctrl + Shift + U
+7. Create line comment: Ctrl + K or Ctrl + Q
+8. Create block comment: Ctrl + Shift + Q
+9. Highlight chunks: Alt then left click drag down or up then right or left
+10. Find/replace: Ctrl + F
+
+Video Tutorials
+1. https://www.youtube.com/watch?v=FOfGv_c6ZrQ
+2. https://www.youtube.com/watch?v=oUFQlLkBP8M
+3. https://www.youtube.com/watch?v=1p7rMCGt_30 <- really useful
+4. https://www.youtube.com/watch?v=mhk2JH6U9S4 <- another version of #3, with funky music
