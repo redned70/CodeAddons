@@ -9,6 +9,8 @@ Spawning a static mission
 Spawning a bandit missions
 ["some_mission"] call DMS_fnc_SpawnBanditMission;
 
->>>>>>>>>> Note <<<<<<<<<<
+>>>>>>>>>> Notes <<<<<<<<<<
 The mission you are spawning must be in the list of possible missions to spawn.
 I have found sometimes there is a little delay especially if you try running the mission immediately after rebooting the server and joining quickly.
+
+You can then do the mission and check for errors
