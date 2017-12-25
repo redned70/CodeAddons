@@ -3,6 +3,10 @@ Commands
 Spawning a static mission
 Sometimes you need to spawn a mission for testing as it could take ages to actually come around
 
+You need to run the command in the admin console so either load it up in InfiSTAR or log in using the Arma 3 process: #login <password>
+https://community.bistudio.com/wiki/Multiplayer_Server_Commands for more information on that.
+*note only 1 person can be in the console at once*
+
 Spawning a static mission
 ["Some_Mission"] call DMS_fnc_SpawnStaticMission;
 
