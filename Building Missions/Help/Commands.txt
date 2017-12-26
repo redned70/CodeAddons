@@ -18,3 +18,7 @@ The mission you are spawning must be in the list of possible missions to spawn.
 I have found sometimes there is a little delay especially if you try running the mission immediately after rebooting the server and joining quickly.
 
 You can then do the mission and check for errors
+
+
+Arma 3 scripting command list
+https://community.bistudio.com/wiki/Category:Scripting_Commands_Arma_3
