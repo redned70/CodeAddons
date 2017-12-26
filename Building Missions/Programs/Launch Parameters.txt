@@ -32,7 +32,7 @@ timeout 4
 
 ::Config | Edit to fit your needs
 ::---> ===============================================================================================================================================
-:: Your Arma 3 >> you need to put in th correct path
+:: Your Arma 3 >> each player needs to put in the correct path to their steam installation.
 set arma3=D:\Games\Steam\steamapps\common\Arma 3
 :: Server IP    
 set IP=185.38.151.161
@@ -41,7 +41,7 @@ set PORT=2442
 :: Server PASSWORD
 set PASSWORD=
 :: Required Mods [ Ex. @Taviana;@DayzOverwatch;@DayZ_Epoch; ]
-set MODS=@Exile;@ASDG_JR;@NATO_Rus_Weapons;@NATO_Rus_Vehicle;@RHSAFRF;@RHSUSAF;@hlcmods;@extendedbase;
+set MODS=@Exile;@RHSAFRF;@RHSUSAF;@CUP_Terrains_Core;@NapfIslandA3;
 
 :: DO NOT EDIT THE LINES BELOW
 ::===============================================================================================================================================
