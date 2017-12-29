@@ -1,0 +1,33 @@
+Its not really anything to do with DMS but thought i would add it in anyway.
+
+All traders should be in InitPlayerLocal.sqf inside your mission PBO folder.
+
+Standard formatting looks like:
+
+_trader =
+ [
+     "Exile_Trader_Vehicle",
+     "Exile_Trader_Vehicle",
+     "WhiteHead_17",
+     ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
+     [X,Y,Z],
+  43.0148 //direction (0-360)
+ ]
+ call ExileClient_object_trader_create; 
+ 
+but you can play with traders so they load custom stuff, my server has several different vehicle traders in different cities so not everything is available everywhere.
+
+_trader =
+ [
+     "Exile_Trader_Vehicle",
+     "Exile_Trader_CommunityCustoms8",
+     "WhiteHead_17",
+     ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
+     [X,Y,Z],
+  43.0148 //direction (0-360)
+ ]
+ call ExileClient_object_trader_create; 
+ 
+This vehicle trader calls the trader list from Exile_Trader_CommunityCustoms8 so you can make it different from other vehicle traders.
+
+I use the a3_custom.pbo to load all the trader object mapping as it allows for simulated and simple objects so giving the choice of dynamic lighting and interactive objects with a lighter server load and more FPS
