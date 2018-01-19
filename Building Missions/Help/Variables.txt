@@ -5,7 +5,7 @@ Variables
 2.	Public
 	Passed through all parts of the Arma/Exile server
 3.	Single/Strings
-	One value for a variable or a number os single values for one variable
+	One value for a variable or a number of single values for one variable
 
 >>>>>>>>>> IMPORTANT <<<<<<<<<<
 ALL private variables MUST start with an underscore like _pos in your missions otherwise the server will immediately throw an error!
@@ -29,3 +29,7 @@ Private variables can be passed through the DMS system and not just used inside 
 					
 *	Remember everything must be in quotes with a comma after each item except the final one and the [] must end with a semi-colon (this is a string variable).
 
+
+2. Define public variable which can be passed between mods
+publicVariable "NED_Vehicles";
+NED_Vehicles = [];
