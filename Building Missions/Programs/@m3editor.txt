@@ -1,0 +1,17 @@
+Note: turn off battleye before launching
+Note: make sure launcher wont go into full screen mode
+Note: 32 bit mode seems to work better while using all the mapping tools
+
+keep this bit of code handy to import Eden into m3_editor via debug screen
+
+ {
+_dir = getdir _x;
+_object setVariable ['M3E_dir', _dir, true];
+_object setVariable ['M3E_pitch', 0, true];
+_object setVariable ['M3E_bank', 0, true];
+_object setVariable ['M3E_followterrain', false, true];
+_object setVariable ['M3E_position', position _x, true];
+M3E_insertedObjects pushBack _x;
+}
+forEach allMissionObjects "All";
+call M3E_fnc_loadSpawnedList;

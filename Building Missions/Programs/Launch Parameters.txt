@@ -3,6 +3,10 @@ Launch parameters can be important - like loading certain mods before other ones
 This is my editor mod launch line - 
 @Exile;@RHSAFRF;@RHSUSAF;D:\Games\Steam\steamapps\common\Arma 3\@Napf Island A3;D:\Games\Steam\steamapps\common\Arma 3\!Workshop\@CUP Terrains - Core;D:\Games\Steam\steamapps\common\Arma 3\@m3e_3den;D:\Games\Steam\steamapps\common\Arma 3\@m3editor;
 
+Note: turn off battleye before launching
+Note: make sure game wont go into full screen mode (use windowed or full screen window)
+Note: 32 bit mode seems to work better while using all the mapping tools
+
 You can see using the Arma3 main launch and mods not installed by steam means they need a full path rather than ones downloaded from steam workshop which are just the @mod commands.
 This is for my Napf server and so requires CUP Terrains but i also load in @m3e_3den and @m3editor, i even sometimes load in @Exilemod_Loot_Position_Creator.
 When i am editing, due to some oddities in these pure editing side mods, i always load in 32 bit and in full screen windowed mode, this prevents several issues with the mods not really beign in full control when exporting or saving and iff you are full screen then @m3editor crashes like a boss when saving and the loot position mod wont work in 64 bit.

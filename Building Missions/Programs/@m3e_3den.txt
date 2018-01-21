@@ -1,0 +1,3 @@
+Note: turn off battleye before launching
+Note: make sure game wont go into full screen mode (use windowed or full screen window)
+Note: 32 bit mode seems to work better while using all the mapping tools

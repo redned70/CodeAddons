@@ -1,0 +1,22 @@
+
+For mapping of the trader into initPlaerLocal.sqf add under:
+
+if (!hasInterface || isServer) exitWith {};
+
+Use this template for each trade you wish to use:
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Test Trader
+_trader =
+[
+    "Exile_Trader_Armory",													//type of trader (important if you do custom vehicles to quote a vehicle trader)
+    "Exile_Trader_Armory",													//which trader class is used for the sale prices
+    "WhiteHead_17",															//model
+    ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],		//animations
+    [247.8,173.1,0.073],													//[X,Y,Z]
+    0																		//rotation
+]
+call ExileClient_object_trader_create;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
