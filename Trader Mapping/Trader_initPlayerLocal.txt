@@ -20,3 +20,70 @@ _trader =
 call ExileClient_object_trader_create;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Trader types: Use as the trader class name -> remember the vehicle spawning traders have extra logic to spawn the vehicle in a safe place so quote the vehicle trader in line 1 and the custom trader price list in the 2nd line
+
+	Exile_Trader_Aircraft				// If creating a custom trader, use this in first line and a CommunityCustoms in the 2nd to make purchasing work for spawn point
+	Exile_Trader_AircraftCustoms
+	Exile_Trader_Armory
+	Exile_Trader_Boat
+	Exile_Trader_BoatCustoms
+	Exile_Trader_Equipment
+	Exile_Trader_Food
+	Exile_Trader_Hardware
+	Exile_Trader_Office
+	Exile_Trader_SpecialOperations
+	Exile_Trader_Vehicle				// If creating a custom trader, use this in first line and a CommunityCustoms in the 2nd to make purchasing work for spawn point
+	Exile_Trader_VehicleCustoms
+	Exile_Trader_WasteDump
+	Exile_Trader_CommunityCustoms		// Don't use these classes in the first line if you are building a custom Aircraft/Boat/Vehicle trader, use in the 2nd line instead
+	Exile_Trader_CommunityCustoms2      // Don't use these classes in the first line if you are building a custom Aircraft/Boat/Vehicle trader, use in the 2nd line instead
+	Exile_Trader_CommunityCustoms3      // Don't use these classes in the first line if you are building a custom Aircraft/Boat/Vehicle trader, use in the 2nd line instead
+	Exile_Trader_CommunityCustoms4      // Don't use these classes in the first line if you are building a custom Aircraft/Boat/Vehicle trader, use in the 2nd line instead
+	Exile_Trader_CommunityCustoms5      // Don't use these classes in the first line if you are building a custom Aircraft/Boat/Vehicle trader, use in the 2nd line instead
+	Exile_Trader_CommunityCustoms6      // Don't use these classes in the first line if you are building a custom Aircraft/Boat/Vehicle trader, use in the 2nd line instead
+	Exile_Trader_CommunityCustoms7      // Don't use these classes in the first line if you are building a custom Aircraft/Boat/Vehicle trader, use in the 2nd line instead
+	Exile_Trader_CommunityCustoms8      // Don't use these classes in the first line if you are building a custom Aircraft/Boat/Vehicle trader, use in the 2nd line instead
+	Exile_Trader_CommunityCustoms9      // Don't use these classes in the first line if you are building a custom Aircraft/Boat/Vehicle trader, use in the 2nd line instead
+	Exile_Trader_CommunityCustoms10     // Don't use these classes in the first line if you are building a custom Aircraft/Boat/Vehicle trader, use in the 2nd line instead
+
+Model classes: there are loads but basics are:
+	WhiteHead_01 up to> WhiteHead_21
+	GreekHead_A3_01 up to > GreekHead_A3_09
+
+Animations:
+loads and loads but I found some don't work so here are the ones I am using which work for me:
+
+	Exile_Trader_Aircraft				> ["LHD_krajPaluby"],	
+	Exile_Trader_AircraftCustoms		> ["HubStandingUC_idle1", "HubStandingUC_idle2", "HubStandingUC_idle3", "HubStandingUC_move1", "HubStandingUC_move2"],	
+	Exile_Trader_Armory 				> ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+	Exile_Trader_Boat					> ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],	
+	Exile_Trader_BoatCustoms			> ["Acts_Kore_IdleNoWeapon_loop"],
+	Exile_Trader_Equipment				> ["HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
+	Exile_Trader_Food					> ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
+	Exile_Trader_Hardware				> ["HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
+	Exile_Trader_Office					> ["HubBriefing_scratch", "HubBriefing_stretch", "HubBriefing_think", "HubBriefing_lookAround1", "HubBriefing_lookAround2"],
+	Exile_Trader_SpecialOperations		> ["HubStanding_idle1", "HubStanding_idle2", "HubStanding_idle3"],
+	Exile_Trader_Vehicle				> ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],	
+	Exile_Trader_VehicleCustoms			> ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],	
+	Exile_Trader_WasteDump				> ["HubStandingUA_move1", "HubStandingUA_move2", "HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],
+    Exile_Trader_CommunityCustoms(x)	> ["HubStandingUA_idle1", "HubStandingUA_idle2", "HubStandingUA_idle3"],	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
