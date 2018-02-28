@@ -1,0 +1,13 @@
+
+
+
+
+
+
+Useful for adjusting DMS detect distance:
+add after the _group AI is spawned
+
+_group setVariable ["DMS_ai_freezingDistance",2500];
+_group setVariable ["DMS_ai_unfreezingDistance",2500];
+
+you can adjust to fit

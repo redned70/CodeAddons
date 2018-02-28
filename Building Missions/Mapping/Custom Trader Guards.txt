@@ -1,0 +1,44 @@
+Maps the same as Traders in initPlayerLocal.sqf
+
+///////////////////////////////////////////////////////////////////////////
+// Guard 01
+///////////////////////////////////////////////////////////////////////////
+_trader = 
+[
+    "Exile_Guard_01",					// Guard Type
+    "",									// Don't give it a trader interface
+    "WhiteHead_17",						// Head type - select from usual list of skins
+    ["InBaseMoves_patrolling1"],		// Animations
+    [X,Y,Z],							// Co-ordinates
+    Rot									// Facing direction (rotation)
+]
+call ExileClient_object_trader_create;
+
+///////////////////////////////////////////////////////////////////////////
+// Guard 02
+///////////////////////////////////////////////////////////////////////////
+_trader = 
+[
+    "Exile_Guard_02",
+    "",
+    "WhiteHead_10",
+    ["InBaseMoves_patrolling2"],
+    [X,Y,Z],
+    Rot
+]
+call ExileClient_object_trader_create;
+
+
+///////////////////////////////////////////////////////////////////////////
+// Guard 03
+///////////////////////////////////////////////////////////////////////////
+_trader = 
+[
+    "Exile_Guard_03",
+    "",
+    "WhiteHead_10",
+    ["InBaseMoves_patrolling1"],
+    [X,Y,Z],
+    Rot
+]
+call ExileClient_object_trader_create;
