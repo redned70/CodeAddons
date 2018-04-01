@@ -1,0 +1,48 @@
+Events can be created through phpMyAdmin or HeidiSQL etc it is basically a task to auto run on a schedule and is useful for clean up or manipulation of the database.
+
+phpMyAdmin
+1. Click Events>New on tree on left side
+2. Give the event a name
+3. Status : Enabled
+4. Event type: RECURRING
+5. Execute every: X HOUR		// replace X with how often you want it to run or select other time type from dropdown
+6. Start : use date and time picker to select a start time/date for the event
+7. END : leave this blank if you just want it to keep going
+8. Definition : this is where your code goes
+9. On completion preserve : tick yes to keep it going after each use
+10. Definer: leave blank
+11. Comment: you can add a description here of what the event does
+
+---------------------------------------------------------------------------------
+
+8. Definitions - only insert lines after "code:"
+
+A. Player Clean up
+This cleans the player history table up to only include 3 days.
+I run this hourly to keep the table small but you could run with less days being kept or run it less frequently.
+To run with 2 days only the change INTERVAL 3 DAY to INTERVAL 2 DAY
+
+code:
+
+DELETE FROM player_history WHERE died_at < DATE_SUB(now(), INTERVAL 3 DAY)
+
+
+---------------------------------------------------------------------------------
+B. Player De-duplicate
+This suppresses a rare bug which leaves a player with damage = 1 (i.e. dead) in the current player table along side their re-spawned character, this can lead to spawning in the ground or as a bird.
+I run this every 5 minutes so if it happens the dead character will be deleted automatically within 5 minutes so the player can rejoin and continue playing.
+
+code:
+
+DELETE FROM player WHERE damage = 1
+
+
+---------------------------------------------------------------------------------
+C. Sign Update
+This gets round using Infistar sign posts showing up as user vehicles in statistic web pages which you may be using for the server, it also makes the admin signs permanent as it updates the last used field.
+I run this every hour.
+
+code:
+
+UPDATE `vehicle` SET `account_uid` = 'DMS_PersistentVehicle', `last_updated_at` = NOW() WHERE `class` = 'Exile_Sign_TraderCity'
+

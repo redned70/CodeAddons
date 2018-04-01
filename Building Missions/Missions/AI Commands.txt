@@ -1,11 +1,34 @@
+>>>>>>>>>>			Assuming the AI are called under _group				<<<<<<<<<<
+
+// Stop Ai wandering off
+{_x disableAI "PATH";} forEach (units _group);
+
+You can stack up these expressions:
+
+{
+_x disableAI "PATH";
+_x disableAI "MOVE";
+} forEach (units _group);
+
+other commands include:
+				_group enableAI "TARGET";
+				//_group disableAI "TARGET";	// pretty much every flag has enableAI or disableAI
+				_group enableAI "AUTOTARGET";
+				_group enableAI "MOVE";
+				_group enableAI "ANIM";
+				_group disableAI "TEAMSWITCH";
+				_group enableAI "FSM";
+				_group enableAI "AIMINGERROR";
+				_group enableAI "SUPPRESSION";
+				_group enableAI "CHECKVISIBLE";
+				_group enableAI "COVER";
+				_group enableAI "AUTOCOMBAT";
+				_group enableAI "PATH"
 
 
 
 
-
-
-Useful for adjusting DMS detect distance:
-add after the _group AI is spawned
+//Useful for adjusting DMS detect distance add after the _group AI is spawned
 
 _group setVariable ["DMS_ai_freezingDistance",2500];
 _group setVariable ["DMS_ai_unfreezingDistance",2500];
