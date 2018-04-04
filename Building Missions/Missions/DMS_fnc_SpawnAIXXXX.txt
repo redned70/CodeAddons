@@ -1,0 +1,78 @@
+Function : 	DMS_fnc_SpawnAIGroup
+Usage :		Spawns a "group" of AI in a single position - used mainly in bandit (random) missions
+
+	[
+		_pos,					// ARRAY (positionATL): Position of AI
+		_count,					// SCALAR: Number of AI
+		_difficulty,			// STRING: AI Difficulty: "random","hardcore","difficult","moderate", or "easy"
+		_class,					// STRING: AI Class: "random","assault","MG", or "sniper" OR [_class,_launcherType]
+		_side, 					// STRING: Only "bandit" is supported by default
+		_customGearSet			// (OPTIONAL) ARRAY: Manually defined AI gear. Refer to functional documentation of fn_SpawnAISoldier.sqf for more info.
+	] call DMS_fnc_SpawnAIGroup;
+
+
+Example : for bandit missions (non-static) you require to use the "_pos" variable so it spawns where the random position has been set
+
+_group =	[
+				_pos,							// Position of AI
+				10,								// Number of AI
+				"random",						// "random","hardcore","difficult","moderate", or "easy"
+				"random", 						// "random","assault","MG","sniper" or "unarmed" OR [_type,_launcher]
+				"bandit" 						// "bandit","hero", etc.
+			] call DMS_fnc_SpawnAIGroup;
+
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+Function : 	DMS_fnc_SpawnAIGroup_MultiPos
+Usage :		Spawns "groups" (multi) of AI in each position - used mainly in static missions
+
+	Usage:
+	[
+		[
+			_position1,			// ARRAY (positionATL): Potential location for AI to spawn #1
+			_position2,			// ARRAY (positionATL): Potential location for AI to spawn #2
+			...
+			_positionN			// ARRAY (positionATL): Potential location for AI to spawn #N
+		],
+		_count,					// SCALAR (Integer > 0): Number of AI
+		_difficulty,			// STRING: AI Difficulty: "random","hardcore","difficult","moderate", or "easy"
+		_class,					// STRING: AI Class: "random","assault","MG","sniper" or "unarmed" OR [_class,_launcherType]
+		_side 					// STRING: Only "bandit" is supported atm
+		_customGearSet			// (OPTIONAL) ARRAY: Manually defined AI gear. Refer to functional documentation of fn_SpawnAISoldier.sqf for more info.
+	] call DMS_fnc_SpawnAIGroup_MultiPos;
+
+
+
+Example: From one of my static missions
+
+_group =	[
+				_AISoldierSpawnLocations,							// Positions of AI groups
+				10,													// Number of AI
+				"random",											// "random","hardcore","difficult","moderate", or "easy"
+				"random",                                           // "random","assault","MG","sniper" or "unarmed" OR [_type,_launcher]
+				"bandit"                                            // "bandit","hero", etc.
+			] call DMS_fnc_SpawnAIGroup_MultiPos;
+
+
+note about _AISoldierSpawnLocations
+I use a randomising string of locations to build this string of coordinates.
+Final string should come out to ["X,Y,Z", "X,Y,Z", "X,Y,Z", "X,Y,Z", "X,Y,Z", "X,Y,Z"];
+
+i.e.
+
+_group =	[
+				["X,Y,Z", "X,Y,Z", "X,Y,Z", "X,Y,Z", "X,Y,Z", "X,Y,Z"],							// Positions of AI groups
+				10,																				// Number of AI
+				"random",																		// "random","hardcore","difficult","moderate", or "easy"
+				"random",                                       							    // "random","assault","MG","sniper" or "unarmed" OR [_type,_launcher]
+				"bandit"                                       								    // "bandit","hero", etc.
+			] call DMS_fnc_SpawnAIGroup_MultiPos;
+
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+
+
+
+

@@ -1,0 +1,15 @@
+If you ever need to import from Eden into m3editor then load mission in eden and start playing (green start on bottom right) and put the following into the console (press escape) and execute
+
+
+
+{
+_dir = getdir _x;
+_object setVariable ['M3E_dir', _dir, true];
+_object setVariable ['M3E_pitch', 0, true];
+_object setVariable ['M3E_bank', 0, true];
+_object setVariable ['M3E_followterrain', false, true];
+_object setVariable ['M3E_position', position _x, true];
+M3E_insertedObjects pushBack _x;
+}
+forEach allMissionObjects "All";
+call M3E_fnc_loadSpawnedList;
