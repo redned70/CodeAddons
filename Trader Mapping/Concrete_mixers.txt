@@ -1,0 +1,17 @@
+// Put the following into initServer.sqf in the base of your mpmission PBO and update coords to match where you want them
+// Concrete mixers (co-ordinates tidied for ease)
+_concreteMixers = 
+					[
+					//	[[X, Y, Z], rotation],
+						[[6458, 15753, 10.432], 55], 	// place 1
+						[[12881,9845,30], 10], 			// place 2
+						[[5405,5658,117], 10] 			// place 3
+					];
+					{
+						_concreteMixer = "Exile_ConcreteMixer" createVehicle (_x select 0);
+						_concreteMixer setDir (_x select 1);
+						_concreteMixer setPosASL (_x select 0);
+						_concreteMixer allowDamage false;
+						_concreteMixer enableSimulationGlobal true;
+					}
+					forEach _concreteMixers;
