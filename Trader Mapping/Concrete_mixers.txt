@@ -1,11 +1,11 @@
-// Put the following into initServer.sqf in the base of your mpmission PBO and update coords to match where you want them
-// Concrete mixers (co-ordinates tidied for ease)
+// Put the following into initServer.sqf in the base of your mpmission PBO and update co-ords to match where you want them
+// Concrete mixers (co-ordinate decimal places tidied for ease) you do need markers in mission.sqm (remember coordinates are [X,Z,Y] in SQM files)
 _concreteMixers = 
 					[
 					//	[[X, Y, Z], rotation],
-						[[6458, 15753, 10.432], 55], 	// place 1
-						[[12881,9845,30], 10], 			// place 2
-						[[5405,5658,117], 10] 			// place 3
+						[[6458, 15753, 10], 15], 	// place 1
+						[[12881,9845,30], 105], 	// place 2
+						[[5405,5658,117], 120] 		// place 3
 					];
 					{
 						_concreteMixer = "Exile_ConcreteMixer" createVehicle (_x select 0);
