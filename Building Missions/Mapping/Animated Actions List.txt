@@ -1,4 +1,18 @@
-movPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon" - Put weapon down, Short Length 
+
+https://community.bistudio.com/wiki/BIS_fnc_ambientAnim
+https://community.bistudio.com/wiki/BIS_fnc_ambientAnimCombat
+https://community.bistudio.com/wiki/BIS_fnc_ambientAnimGetParams
+
+https://community.bistudio.com/wiki/playAction/actions
+https://community.bistudio.com/wiki/playActionNow
+
+https://community.bistudio.com/wiki/animationNames
+
+https://community.bistudio.com/wiki/Category:Arma_3:_New_Scripting_Commands_List
+
+
+
+"movPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon" - Put weapon down, Short Length 
 "AmovPercMstpSrasWrflDnon_AmovPercMevaSrasWrflDb" - Hands behind back - Static 
 "AmovPercMstpSrasWrflDnon_AmovPercMstpSnonWnonDnon" - put rifle on back - short Length 
 "AmovPercMstpSrasWrflDnon_AmovPercMstpSrasWpstDnon_end"- Pull out handgun (Pretty cool) - Short 
