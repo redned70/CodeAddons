@@ -26,6 +26,11 @@ other commands include:
 				_group enableAI "PATH"
 
 
+use> 
+_group setCombatMode "RED";						// https://community.bistudio.com/wiki/setCombatMode
+_group setBehaviour "AWARE";					// https://community.bistudio.com/wiki/setBehaviour
+
+
 
 
 //Useful for adjusting DMS detect distance add after the _group AI is spawned
