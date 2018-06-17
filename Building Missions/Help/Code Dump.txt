@@ -1,0 +1,95 @@
+Random stuff for reference
+
+switch (toLower worldName) do
+{
+	case "altis":
+	case "chernarus":
+	case "esseker":
+	case "namalsk":
+	case "napf":
+	case "taviana":
+    case "tanoa":
+	
+if (_world isEqualTo 'altis') then {};
+if (_world isEqualTo 'chernarus') then {};	
+if (_world isEqualTo 'napf') then {};
+
+
+
+
+AI stuff	
+	
+				_unit enableAI "TARGET";
+				_unit enableAI "AUTOTARGET";
+				_unit enableAI "MOVE";
+				_unit enableAI "ANIM";
+				_unit disableAI "TEAMSWITCH";
+				_unit enableAI "FSM";
+				_unit enableAI "AIMINGERROR";
+				_unit enableAI "SUPPRESSION";
+				_unit enableAI "CHECKVISIBLE";
+				_unit enableAI "COVER";
+				_unit enableAI "AUTOCOMBAT";
+				_unit enableAI "PATH";	
+	
+				// Set skills
+				_group setSkill [ "aimingAccuracy", _ccrcy ];
+				_group setSkill [ "aimingShake", _mShk ];
+				_group setSkill [ "aimingSpeed", _mSpd ];
+				_group setSkill [ "endurance", _stmna ];
+				_group setSkill [ "spotDistance", _sptDst ];
+				_group setSkill [ "spotTime", _sptTme ];
+				_group setSkill [ "courage", _crge ];
+				_group setSkill [ "reloadSpeed", _rldSpd ];
+				_group setSkill [ "commanding", _cmmndng ];
+				_group setSkill [ "general", _gnrl ];
+				
+				for "_i" from 1 to _amountOfWeapons do
+				{
+					_weaponToAdd = _possibleWeapons call BIS_fnc_selectRandom;
+					_vehicle addWeaponCargoGlobal [_weaponToAdd,1];
+				
+					_magazinesToAdd = getArray (configFile >> "CfgWeapons" >> _weaponToAdd >> "magazines");
+					_vehicle addMagazineCargoGlobal [(_magazinesToAdd select 0),round random 3];
+				}; 
+
+
+        _destination = getPos _target;
+        _group2 allowFleeing 0;
+        _wp = _group2 addWaypoint [_destination, 0] ;
+        _wp setWaypointFormation "Column";
+        _wp setWaypointBehaviour "COMBAT";
+        _wp setWaypointCombatMode "RED";
+        _wp setWaypointCompletionRadius 1;
+        _wp setWaypointType "SAD";
+		
+		
+
+	[
+		[11248.6,11834.3,0.0455627],
+		"hardcore",
+		[100,75],
+		"Bandit"
+	] call DMS_fnc_SpawnMinefield;			
+		
+		
+		
+infiSTAR
+fnc_worldspace = {
+	disableSerialization;
+	_name = cameraOn call fnc_get_exileObjName;
+	_puid = getPlayerUID cameraOn;
+	_dir = getDir cameraOn;
+	_pos = getPosATL cameraOn;
+	_worldspace = format['[%1,%2]',_dir,_pos];
+	_log = format['Worldspace of %1 is %2',_name,_pos];
+	systemChat format['%1 - saved to RPT',_log];
+	diag_log [_log,'PLAIN DOWN'];
+	if(isNull (findDisplay 24))then{(findDisplay 46) createDisplay 'RscDisplayChat';};
+	_display = (findDisplay 24);
+	_chat = _display displayCtrl 101;
+	_chat ctrlSetText _worldspace;
+	_log call fnc_adminLog;
+};		
+		
+		
