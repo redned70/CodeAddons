@@ -5,11 +5,11 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  * Slight edit to give min and max random possible loot in crate
  */
- 
+
 private["_airportPositions", "_config", "_markerTime", "_filteredAirportPositions", "_dropAltitude", "_dropRadius", "_boxType", "_airportPosition", "_position", "_marker", "_box", "_itemClassName", "_itemCount","_itemCountMax","_itemCountMin", "_i", "_supplySmoke", "_parachute"];
 _airportPositions = call ExileClient_util_world_getAllAirportPositions;
 _config = configFile >> "CfgSettings" >> "Events" >> "SupplyBox";
@@ -20,7 +20,7 @@ if (_airportPositions isEqualTo []) exitWith
 };
 _filteredAirportPositions = [];
 {
-	if !([_x, 1000] call ExileClient_util_world_isTraderZoneInRange) then 
+	if !([_x, 1000] call ExileClient_util_world_isTraderZoneInRange) then
 	{
 		_filteredAirportPositions pushBack _x;
 	};
@@ -58,7 +58,7 @@ clearItemCargoGlobal _box;
 	_itemCountMin  = _x select 1;												//added by [CiC]red_ned
 	_itemCountMax  = _x select 2;												//added by [CiC]red_ned
 	_itemCount = _itemCountMin + (round (random(_itemCountMax-_itemCountMin)));	//added by [CiC]red_ned
-	for "_i" from 1 to _itemCount do 
+	for "_i" from 1 to _itemCount do
 	{
 		[_box, _itemClassName] call ExileClient_util_containerCargo_add;
 	};

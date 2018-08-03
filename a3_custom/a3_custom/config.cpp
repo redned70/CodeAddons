@@ -1,3 +1,4 @@
+// Don't change
 class CfgPatches {
 	class A3_custom {
 		units[] = {};
