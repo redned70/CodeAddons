@@ -261,3 +261,20 @@
 				};
 			};
 		};
+
+		class CASH
+		{
+			/*
+				Drops a supply box on a parachute next to a random airport on the map.
+				The box contains cash only
+				and installed to become a normal storage container.
+			*/
+			type = "spawn";
+			function = "ExileServer_system_event_cash_start";
+			minTime = 25; // minutes
+			maxTime = 45; // minutes
+			minimumPlayersOnline = 0;
+			dropRadius = 500; // 500m around an airport (including the main airport on Altis!)
+			dropAltitude = 0; // altitude of the drop
+			markerTime = 10; // minutes
+		};
