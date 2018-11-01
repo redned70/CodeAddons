@@ -1,0 +1,25 @@
+
+DMS Config File:
+"DMS_BanditMissionTypes = 	[			//	List of missions with spawn chances. If they add up to 100%, they represent the percentage chance each one will spawn
+											["<MISSION NAME>",3],
+											["<MISSION 2 NAME>",5]
+				];"
+Config - [ ["",X]], new lines must be completed with a comma except last line ];
+Mission Name - the name the mission as listed in its CFG, each mission must be enclosed in quotes
+
+Number - mission chance of spawning.
+You can think of percentage easily if all the mission chances add to 100 in total but in general they just don't and you could work it out with maths and all that or do what I tend to do, 
+1. which mission do you think is standard - set it to 5 
+2. compare each mission to that one and increase if it should be more common or decrease if less common 
+You should then get a sliding scale which should be basically the same no matter how many missions you add. 
+1 - Rarest
+2 - Very Rare
+3 - Rare
+4 - Slightly Less Common
+5 - NORMAL MISSION CHANCE
+6 - Slightly more Common
+7 - More Common
+8 - Very Common
+9 - Most Common
+10 - DOUBLE NORMAL MISSION CHANCE
+Setting them all to same number is fully random as nothing is weighted to be more or less likely 
