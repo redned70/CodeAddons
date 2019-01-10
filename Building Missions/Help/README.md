@@ -5,7 +5,7 @@
 *******************************************************
 	Building Static missions for various maps.
 	Created by [CiC]red_ned using templates by eraser1 
-	18 years of CiC http://cic-gaming.co.uk
+	19 years of CiC http://cic-gaming.co.uk
 *******************************************************
 	This section deals with logic, variables and DMS/Arma commands and how to use them
 *******************************************************
